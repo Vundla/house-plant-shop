@@ -10,7 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint . --ext .ts,.tsx",
-    "predeploy": "npm run build -- --base=/house-plant-shop/",
+    "predeploy": "npm run build -- --base=/house-plant-shop/ && cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

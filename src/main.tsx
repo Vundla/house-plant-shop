@@ -9,7 +9,8 @@ import './styles/index.css';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      {/* Use Vite's BASE_URL so links work under GitHub Pages subpath */}
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <App />
       </BrowserRouter>
     </Provider>
